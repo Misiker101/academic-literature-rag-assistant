@@ -1,0 +1,19 @@
+# Environment variables containing API keys
+.env
+
+# Virtual environments
+tf_env/
+langchain_env/
+venv/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Local Chroma Database storage
+chroma_db/
+*.sqlite3
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
