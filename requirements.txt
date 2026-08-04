@@ -1,0 +1,28 @@
+# --- App ---
+streamlit>=1.38.0
+python-dotenv>=1.0.1
+Pillow>=10.4.0
+
+# --- LangChain core + integrations (all free-tier services) ---
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-google-genai>=2.0.0      # Gemini (free tier)
+langchain-chroma>=0.1.4            # ChromaDB vectorstore (free, local)
+langchain-huggingface>=0.1.0       # HuggingFace embeddings wrapper
+
+# --- Embeddings / re-ranking (free, local, no API key) ---
+sentence-transformers>=3.0.1
+
+# --- Vector DB ---
+chromadb>=0.5.5
+
+# --- Hybrid search ---
+rank_bm25>=0.2.2
+
+# --- PDF parsing / rendering ---
+PyMuPDF>=1.24.9
+
+# --- Optional: OCR for scanned PDFs (uncomment to enable) ---
+# pytesseract>=0.3.13
+# pdf2image>=1.17.0

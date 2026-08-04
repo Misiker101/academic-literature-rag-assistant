@@ -1,5 +1,14 @@
-# Environment variables containing API keys
+# Secrets
 .env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
 
 # Virtual environments
 tf_env/
@@ -11,9 +20,27 @@ ENV/
 __pycache__/
 *.py[cod]
 
+# Data / indexes (regenerate locally with scripts/build_index.py)
+data/pdfs/*.pdf
+data/chroma_db/
+data/bm25_index.pkl
+data/docstore.pkl
+data/skipped_pdfs.json
+eval/results.json
+
 # Local Chroma Database storage
 chroma_db/
 *.sqlite3
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+!data/pdfs/.gitkeep
