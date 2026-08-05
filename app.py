@@ -90,7 +90,7 @@ with left:
                             if st.button(label, key=f"cite_{id(msg)}_{i}"):
                                 set_preview(cit)
 
-    question = st.chat_input("Ask about your papers (e.g. 'What dataset did the RAPTOR paper use?')")
+    question = st.chat_input("Ask about your papers (e.g. 'What dataset did the ViT paper use?')")
     if question:
         st.session_state.messages.append({"role": "user", "content": question})
         with st.spinner("Retrieving & reasoning over your papers..."):

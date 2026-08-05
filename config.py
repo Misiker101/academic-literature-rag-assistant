@@ -22,7 +22,7 @@ for p in [PDF_DIR, CHROMA_DIR.parent]:
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
 
 # gemini-2.0-flash is fast+cheap(free)+good quality.
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 GEMINI_TEMPERATURE = float(os.getenv("GEMINI_TEMPERATURE", "0.1"))
 
 
