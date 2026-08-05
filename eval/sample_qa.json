@@ -1,0 +1,12 @@
+[
+  {
+    "question": "What dataset was used to evaluate the RAPTOR retrieval method?",
+    "expected_paper": "RAPTOR",
+    "expected_answer_contains": ["QuALITY"]
+  },
+  {
+    "question": "What is the main idea behind HyDE?",
+    "expected_paper": "HyDE",
+    "expected_answer_contains": ["hypothetical document"]
+  }
+]

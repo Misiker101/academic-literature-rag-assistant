@@ -2,10 +2,13 @@
 Implements:
 
 * Hybrid search — an EnsembleRetriever that merges the dense (Chroma)
-  retriever and a sparse BM25 retriever with reciprocal-rank fusion.
+  retriever and a sparse BM25 retriever with reciprocal-rank fusion
+  ("RAG-Fusion" idea, but applied across two retrieval *methods* instead 
+  of multiple query rewrites).
 * A free local cross-encoder re-ranker that re-scores the top-N hybrid
   candidates against the raw query for higher precision before the LLM
-  ever sees them (uses a free local model instead of the paid Cohere Rerank API).
+  ever sees them ("Re-ranking", uses a free local model instead of 
+  the paid Cohere Rerank API).
 * Optional per-paper metadata filtering (a lightweight
   "Query Construction") so a question that names a paper only
   retrieves from that paper.
@@ -16,7 +19,7 @@ import logging
 from typing import List, Optional
 
 from langchain_core.documents import Document
-from langchain.retrievers import EnsembleRetriever
+from langchain_classic.retrievers import EnsembleRetriever
 from langchain_community.retrievers import BM25Retriever
 from sentence_transformers import CrossEncoder
 
@@ -105,7 +108,7 @@ def retrieve_for_summary(paper_hint: str, query: str) -> List[Document]:
 
 
 def retrieve_multi(sub_queries: List[str], final_k: int = config.TOP_K_FINAL) -> List[Document]:
-    """Used for cross-paper / comparison questions (Decomposition):
+    """Used for cross-paper / comparison questions (Part 7, Decomposition):
     retrieve separately for each sub-question, then de-duplicate and
     re-rank the union against the original combined intent."""
     hybrid = build_hybrid_retriever(k=config.TOP_K_CANDIDATES)

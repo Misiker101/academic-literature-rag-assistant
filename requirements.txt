@@ -4,12 +4,14 @@ python-dotenv>=1.0.1
 Pillow>=10.4.0
 
 # --- LangChain core + integrations (all free-tier services) ---
-langchain>=0.3.0
-langchain-core>=0.3.0
-langchain-community>=0.3.0
+langchain>=1.0.0
+langchain-classic>=1.0.0
+langchain-core>=1.0.0
+langchain-community>=0.4.0
+langchain-text-splitters>=1.0.0
 langchain-google-genai>=2.0.0      
 langchain-chroma>=0.1.4            
-langchain-huggingface>=0.1.0       
+langchain-huggingface>=0.1.0      
 
 # Embeddings / re-ranking (free, local, no API key)
 sentence-transformers>=3.0.1
