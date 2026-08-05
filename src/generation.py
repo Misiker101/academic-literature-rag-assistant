@@ -60,6 +60,25 @@ Answer the question using only the context above, citing as instructed."""
 CITATION_PATTERN = re.compile(r"\[([^\[\]]+?),\s*p\.\s*(\d+)\]")
 
 
+def _extract_text(content) -> str:
+    # Normalize an AIMessage.content value to plain text.
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts = []
+        for block in content:
+            if isinstance(block, str):
+                parts.append(block)
+            elif isinstance(block, dict):
+                # Skip non-text blocks (e.g. "thinking"/"thought" parts)
+                if block.get("type") in (None, "text") and "text" in block:
+                    parts.append(block["text"])
+            else:
+                parts.append(str(block))
+        return "".join(parts)
+    return str(content)
+
+
 @dataclass
 class RagResult:
     answer: str
@@ -105,7 +124,7 @@ def generate_answer(question: str, docs: List[Document]) -> RagResult:
         ("human", USER_TEMPLATE.format(question=question, context=context)),
     ]
     response = llm.invoke(messages)
-    answer_text = response.content
+    answer_text = _extract_text(response.content)
 
     citation_map = _build_citation_map(docs)
     found = []
