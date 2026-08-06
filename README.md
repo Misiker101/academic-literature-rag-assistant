@@ -1,4 +1,4 @@
-# 📚 Academic Literature RAG Assistant
+# Academic Literature RAG Assistant
 
 A domain-specific Retrieval-Augmented Generation (RAG) system for research/thesis
 "related work" folders. Drop all the reference PDFs into a folder, ask questions in a chat UI, and
@@ -7,15 +7,15 @@ preview panel — no more manually re-reading or re-uploading PDFs to a chatbot.
 
 Built entirely on **free** infrastructure:
 
-| Component        | Choice                                   | Why |
-|-------------------|-------------------------------------------|-----|
-| LLM               | Google **Gemini** (`gemini-3.5-flash`)    | Generous free tier |
-| Embeddings        | `sentence-transformers/all-MiniLM-L6-v2`  | Local, free, no API key |
-| Vector DB         | **ChromaDB**                              | Free, local, persists to disk |
-| Keyword search    | `rank_bm25`                               | Free, local |
-| Re-ranker         | `cross-encoder/ms-marco-MiniLM-L-6-v2`    | Free, local (replaces paid Cohere Rerank) |
-| UI                | **Streamlit**                             | Free, deployable to Streamlit Community Cloud |
-| PDF parsing/render| **PyMuPDF**                               | Free, fast |
+| Component        | Choice                                   
+|-------------------|-------------------------------------------|
+| LLM               | Google **Gemini** (`gemini-3.5-flash`)    | 
+| Embeddings        | `sentence-transformers/all-MiniLM-L6-v2`  | 
+| Vector DB         | **ChromaDB** (Free, local)                | 
+| Keyword search    | `rank_bm25`  (Free, local)                | 
+| Re-ranker         | `cross-encoder/ms-marco-MiniLM-L-6-v2` (Free, replaces paid Cohere Rerank) | 
+| UI                | **Streamlit**                             | 
+| PDF parsing/render| **PyMuPDF**                               |
 
 I built this **project-based learning** for the concepts in
 LangChain's [RAG From Scratch](https://github.com/langchain-ai/rag-from-scratch) notebook series (indexing, hybrid retrieval,
@@ -31,6 +31,8 @@ below to map each notebook idea to the actual production code.
 3. [Installation](#installation)
 4. [Configuration](#configuration)
 5. [Usage](#usage)
+6. [Concepts & where they live in this repo](#concepts--where-they-live-in-this-repo)
+7. [License](#license)
 
 ---
 
@@ -176,3 +178,24 @@ which they're cached locally).
 
    Click any `[Paper Title, p. X]` citation button under an answer to load that exact
    page in the right-hand preview panel, with the cited passage highlighted.
+
+## Concepts & where they live in this repo
+
+| Notebook concept | Notebook part | Where it's used here |
+|---|---|---|
+| Indexing (load → split → embed → vectorstore) | Part 2 | `src/ingestion.py`, `src/indexing.py` |
+| Retrieval & generation basics | Parts 1–4 | `src/retrieval.py`, `src/generation.py` |
+| Query routing (function calling / structured output) | Part 10 | `src/router.py` |
+| Query decomposition (sub-questions, answer then synthesize) | Part 7 | `src/router.py` (`sub_questions`) + `retrieval.retrieve_multi` |
+| Query construction (metadata filtering) | Part 11 | `retrieval.filter_by_paper` (paper-title hint filtering) |
+| Re-ranking | Part 15 | `retrieval.rerank` (local cross-encoder instead of paid Cohere) |
+| RAG-Fusion (reciprocal rank fusion of multiple retrieved lists) | Part 6 | `retrieval.build_hybrid_retriever` (`EnsembleRetriever` fuses dense + BM25 rankings) |
+| Multi-representation / parent-document style broad retrieval | Part 12 | `retrieval.retrieve_for_summary` (wide per-paper pool for summarization) |
+
+**TODO**: Multi-Query (Part 5), Step-Back
+prompting (Part 8), HyDE (Part 9), RAPTOR recursive clustering (Part 13), ColBERT
+(Part 14), CRAG/Self-RAG agentic correction loops (Parts 16–17).
+
+## License
+
+MIT — see [`LICENSE`](LICENSE).
