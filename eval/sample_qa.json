@@ -1,12 +1,385 @@
 [
   {
-    "question": "What dataset was used to evaluate the RAPTOR retrieval method?",
-    "expected_paper": "RAPTOR",
-    "expected_answer_contains": ["QuALITY"]
+    "question": "What is the primary contribution of the Vision Transformer (ViT) model regarding image classification tasks?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "pure transformer applied directly to sequences of image patches"
+    ]
   },
   {
-    "question": "What is the main idea behind HyDE?",
-    "expected_paper": "HyDE",
-    "expected_answer_contains": ["hypothetical document"]
+    "question": "Which large-scale datasets were used to pre-train the Vision Transformer models in the ViT paper?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "ImageNet-21k",
+      "JFT-300M"
+    ]
+  },
+  {
+    "question": "What classification accuracy did the best Vision Transformer model achieve on the ImageNet benchmark?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "88.55%"
+    ]
+  },
+  {
+    "question": "What optimizer was used to train the models in the Vision Transformer paper, diverging from standard convolutional neural network practices?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "Adam"
+    ]
+  },
+  {
+    "question": "How are position embeddings incorporated into the patch embeddings within the Vision Transformer architecture?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "standard learnable 1D position embeddings"
+    ]
+  },
+  {
+    "question": "What method is used to handle higher resolution images during the fine-tuning stage of the Vision Transformer?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "2D interpolation of the pre-trained position embeddings"
+    ]
+  },
+  {
+    "question": "What alternative name or dataset structure was de-duplicated with respect to the test sets of downstream tasks in the ViT study?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "JFT"
+    ]
+  },
+  {
+    "question": "What was the validation accuracy of the self-supervised ViT-B/16 model on ImageNet using masked patch prediction?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "79.9%"
+    ]
+  },
+  {
+    "question": "Which specific architectural dimension scaling resulted in the largest performance improvements for the Transformer model in the ablation studies?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "depth"
+    ]
+  },
+  {
+    "question": "What technique was used to compute maps of attention from the output token to the input space in the Vision Transformer analysis?",
+    "expected_paper": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+    "expected_answer_contains": [
+      "Attention Rollout"
+    ]
+  },
+  {
+    "question": "What are the six consecutive main stages that traditional optical character recognition (OCR) systems can be roughly divided into?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "image acquisition",
+      "pre-processing",
+      "text detection",
+      "segmentation",
+      "text recognition",
+      "post-processing"
+    ]
+  },
+  {
+    "question": "What are the two main categories that deep-learning-based text recognition techniques are classified into?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "Transformer-free",
+      "Transformer-based"
+    ]
+  },
+  {
+    "question": "What algorithm do convolutional recurrent neural networks (CRNNs) commonly use for aligning input image sequences with character sequences?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "connectionist temporal classification",
+      "CTC"
+    ]
+  },
+  {
+    "question": "What are the two subcategories of Transformer-based text recognition approaches discussed in the survey?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "Convolutional-free",
+      "Convolutional Transformer"
+    ]
+  },
+  {
+    "question": "What persistent challenges in less-studied global languages have significantly hindered the development of robust OCR systems?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "scarcity of rich and diverse datasets"
+    ]
+  },
+  {
+    "question": "What do modern end-to-end text-spotting approaches integrate into a single unified framework?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "text detection and recognition"
+    ]
+  },
+  {
+    "question": "What are the two primary approaches into which text detection methods are broadly categorized?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "segmentation-based",
+      "region-based"
+    ]
+  },
+  {
+    "question": "Why do traditional CRNN-based models suffer from training and inference bottlenecks?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "sequential architectures"
+    ]
+  },
+  {
+    "question": "What specific language scripts heavily dominate current text recognition research as emphasized by the survey?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "English",
+      "Latin script"
+    ]
+  },
+  {
+    "question": "What are the names of the authors who contributed to the comprehensive survey on Transformers in text recognition?",
+    "expected_paper": "A Comprehensive Survey of Transformers in Text Recognition Techniques, Challenges, and Future Directions",
+    "expected_answer_contains": [
+      "Ali Afkari-Fahandari",
+      "Elham Shabaninia",
+      "Fatemeh Asadi-Zeydabadi",
+      "Hossein Nezamabadi-Pour"
+    ]
+  },
+  {
+    "question": "What is the novelty of the proposed A* path-planning algorithm for line segmentation?",
+    "expected_paper": "A* Path Planning for Line Segmentation of Handwritten Documents",
+    "expected_answer_contains": ["soft cost functions", "overlapping text fields"]
+  },
+  {
+    "question": "Which two historical manuscript datasets were used to perform experiments for the A* path-planning line segmentation method?",
+    "expected_paper": "A* Path Planning for Line Segmentation of Handwritten Documents",
+    "expected_answer_contains": ["Saint Gall", "Monk line segmentation"]
+  },
+  {
+    "question": "What binarization technique is used in the text line localization step to effectively cope with complex backgrounds?",
+    "expected_paper": "A* Path Planning for Line Segmentation of Handwritten Documents",
+    "expected_answer_contains": ["Sauvola", "20 × 20 pixels"]
+  },
+  {
+    "question": "How does the proposed A* algorithm handle the problem of unreachable goal states caused by overlapping text?",
+    "expected_paper": "A* Path Planning for Line Segmentation of Handwritten Documents",
+    "expected_answer_contains": ["pass through obstacles", "black ink pixels", "cost"]
+  },
+  {
+    "question": "What is the purpose of the vertical cost function V(n) in the proposed A* path-planning algorithm?",
+    "expected_paper": "A* Path Planning for Line Segmentation of Handwritten Documents",
+    "expected_answer_contains": ["y-position", "deviate"]
+  },
+  {
+    "question": "What pixel-level hit rate did the A* path-planning method achieve on the Saint Gall dataset?",
+    "expected_paper": "A* Path Planning for Line Segmentation of Handwritten Documents",
+    "expected_answer_contains": ["0.998", "pixel-level hit rate"]
+  },
+  {
+    "question": "How does the text line localization step determine the starting points for segmentation?",
+    "expected_paper": "A* Path Planning for Line Segmentation of Handwritten Documents",
+    "expected_answer_contains": ["local maxima", "horizontal ink density histogram"]
+  },
+  {
+    "question": "What is mentioned as a disadvantage of the A* path-planning line segmentation method?",
+    "expected_paper": "A* Path Planning for Line Segmentation of Handwritten Documents",
+    "expected_answer_contains": ["cut some text", "curved character"]
+  },
+  {
+    "question": "How many base characters and total core characters are there in the Amharic script?",
+    "expected_paper": "AHWR‑Net: offline handwritten amharic word recognition using convolutional recurrent neural network",
+    "expected_answer_contains": ["34 base characters", "238 core characters"]
+  },
+  {
+    "question": "What are the three major components of the proposed AHWR-Net framework?",
+    "expected_paper": "AHWR‑Net: offline handwritten amharic word recognition using convolutional recurrent neural network",
+    "expected_answer_contains": ["convolutional neural networks", "recurrent neural networks", "connectionist temporal classification"]
+  },
+  {
+    "question": "Which three state-of-the-art CNN models were modified and compared for feature extraction in the Amharic handwriting recognition task?",
+    "expected_paper": "AHWR‑Net: offline handwritten amharic word recognition using convolutional recurrent neural network",
+    "expected_answer_contains": ["DenseNet-121", "ResNet-50", "VGG-19"]
+  },
+  {
+    "question": "What is the name of the dataset prepared for the Amharic handwritten text recognition study, and how many word images does it contain?",
+    "expected_paper": "AHWR‑Net: offline handwritten amharic word recognition using convolutional recurrent neural network",
+    "expected_answer_contains": ["HARD-I", "33,672"]
+  },
+  {
+    "question": "Why was the Connectionist Temporal Classification (CTC) algorithm used as the loss function in AHWR-Net?",
+    "expected_paper": "AHWR‑Net: offline handwritten amharic word recognition using convolutional recurrent neural network",
+    "expected_answer_contains": ["segmented inputs", "one-to-one correspondence"]
+  },
+  {
+    "question": "Which combination of CNN feature extractor and input image size achieved the best recognition performance for the AHWR task?",
+    "expected_paper": "AHWR‑Net: offline handwritten amharic word recognition using convolutional recurrent neural network",
+    "expected_answer_contains": ["DenseNet-121", "64 × 256", "Model C"]
+  },
+  {
+    "question": "What were the Character Error Rate (CER) and Word Error Rate (WER) achieved by the best-performing AHWR-Net model?",
+    "expected_paper": "AHWR‑Net: offline handwritten amharic word recognition using convolutional recurrent neural network",
+    "expected_answer_contains": ["1.15%", "5.24%"]
+  },
+  {
+    "question": "What structural characteristic of the Amharic script makes handwritten text recognition extremely challenging?",
+    "expected_paper": "AHWR‑Net: offline handwritten amharic word recognition using convolutional recurrent neural network",
+    "expected_answer_contains": ["similarity in shape", "single stroke"]
+  },
+  {
+    "question": "How did the visual cortex discoveries of Hubel and Wiesel inspire artificial intelligence?",
+    "expected_paper": "From Brain Science to Artificial Intelligence",
+    "expected_answer_contains": ["convolutional operations", "multilayered structure"]
+  },
+  {
+    "question": "Which AI mechanism was inspired by psychological concepts and PET imaging studies of how intelligent agents selectively concentrate on information?",
+    "expected_paper": "From Brain Science to Artificial Intelligence",
+    "expected_answer_contains": ["attention mechanism"]
+  },
+  {
+    "question": "What machine learning component was inspired by the discovery of working memory in the brain's prefrontal cortex?",
+    "expected_paper": "From Brain Science to Artificial Intelligence",
+    "expected_answer_contains": ["working memory", "LSTM"]
+  },
+  {
+    "question": "Which continual learning algorithm for deep neural networks was inspired by the in vivo observation of dendritic spines during learning?",
+    "expected_paper": "From Brain Science to Artificial Intelligence",
+    "expected_answer_contains": ["elastic weight consolidation", "EWC"]
+  },
+  {
+    "question": "What is the objective of the MICrONS project under the US BRAIN Initiative?",
+    "expected_paper": "From Brain Science to Artificial Intelligence",
+    "expected_answer_contains": ["MICrONS", "electron microscopy", "3D"]
+  },
+  {
+    "question": "What are the advantages of using optical imaging methods over traditional electrophysiological methods in neuroscience?",
+    "expected_paper": "From Brain Science to Artificial Intelligence",
+    "expected_answer_contains": ["noninvasive", "spatial and temporal resolution", "optogenetics"]
+  },
+  {
+    "question": "Who was the neuroanatomist that utilized Golgi staining to put forward fundamental theories on neurons and is known as the father of modern neurobiology?",
+    "expected_paper": "From Brain Science to Artificial Intelligence",
+    "expected_answer_contains": ["Santiago Ramón y Cajal"]
+  },
+  {
+    "question": "According to the paper on brain science and AI, what is the biggest challenge for microscopic imaging in the coming decade?",
+    "expected_paper": "From Brain Science to Artificial Intelligence",
+    "expected_answer_contains": ["diffraction limit", "field of view", "spatiotemporal resolution"]
+  },
+  {
+    "question": "What optimizer and learning rate were determined optimal by Optuna for the EMNIST dataset in the CVT model?",
+    "expected_paper": "Convolutional Vision Transformer for Handwritten Digit Recognition",
+    "expected_answer_contains": ["SGD", "0.01"]
+  },
+  {
+    "question": "What is the average tenth fold accuracy achieved on the EMNIST-digit dataset by the Convolutional Vision Transformer (CVT)?",
+    "expected_paper": "Convolutional Vision Transformer for Handwritten Digit Recognition",
+    "expected_answer_contains": ["99.89%"]
+  },
+  {
+    "question": "Which loss function was utilized during the training of the CVT model for handwritten digit recognition?",
+    "expected_paper": "Convolutional Vision Transformer for Handwritten Digit Recognition",
+    "expected_answer_contains": ["negative log-likelihood", "NLL"]
+  },
+  {
+    "question": "What Character Error Rate (CER) did the Conv-Transformer reach on the NUST-UHWR test set?",
+    "expected_paper": "Conv-transformer architecture for unconstrained off-line Urdu handwriting recognition",
+    "expected_answer_contains": ["5.31%"]
+  },
+  {
+    "question": "How many unique ligatures exist in the cursive Nastaleeq script of the Urdu language?",
+    "expected_paper": "Conv-transformer architecture for unconstrained off-line Urdu handwriting recognition",
+    "expected_answer_contains": ["24,000"]
+  },
+  {
+    "question": "Which datasets were combined with NUST-UHWR to increase the training diversity for off-line Urdu handwriting recognition?",
+    "expected_paper": "Conv-transformer architecture for unconstrained off-line Urdu handwriting recognition",
+    "expected_answer_contains": ["Urdu Ticker Text", "UPTI 2.0"]
+  },
+  {
+    "question": "What exact formula is used for pixel inversion in the HMBD dataset preprocessing pipeline?",
+    "expected_paper": "Conv-ViT fusion for improved handwritten Arabic character classification",
+    "expected_answer_contains": ["255 - OldPixel"]
+  },
+  {
+    "question": "Which two specific neural network architectures are combined in the ensemble model for Arabic handwritten character classification?",
+    "expected_paper": "Conv-ViT fusion for improved handwritten Arabic character classification",
+    "expected_answer_contains": ["Inception ResNet V2", "Vision Transformer"]
+  },
+  {
+    "question": "What is the image resolution of the HMBD dataset used to evaluate the Arabic character classification model?",
+    "expected_paper": "Conv-ViT fusion for improved handwritten Arabic character classification",
+    "expected_answer_contains": ["300x300"]
+  },
+  {
+    "question": "What dataset was used to train and evaluate the proposed HTR model authored by Pillai et al.?",
+    "expected_paper": "Handwritten Text Recognition using Bi-LSTM, CNN and Transformer Encoder",
+    "expected_answer_contains": [
+      "IAM"
+    ]
+  },
+  {
+    "question": "What is the F1 score achieved by the proposed HTR system on the testing dataset? in HTR using Bi-LSTM, CNN and Transformer Encoder paper",
+    "expected_paper": "Handwritten Text Recognition using Bi-LSTM, CNN and Transformer Encoder",
+    "expected_answer_contains": [
+      "0.7632"
+    ]
+  },
+  {
+    "question": "What type of layer is used after the Bi-LSTM layers to account for blurry strokes or irregular spacing in Pillai et al. paper?",
+    "expected_paper": "Handwritten Text Recognition using Bi-LSTM, CNN and Transformer Encoder",
+    "expected_answer_contains": [
+      "Transformer"
+    ]
+  },
+  {
+    "question": "who are the authors of the Handwritten Text Recognition using Bi-LSTM, CNN and Transformer Encoder paper ?",
+    "expected_paper": "Handwritten Text Recognition using Bi-LSTM, CNN and Transformer Encoder",
+    "expected_answer_contains": [
+      "Pranav Vinod Pillai",
+      "Pranav",
+      "Pillai",
+      "R S Chiraag",
+      "Chiraag",
+      "Mohamed Aasim Amjad"
+    ]
+  },
+  {
+    "question": "What is the depth of the deepest residual network evaluated on the ImageNet dataset on the paper authored by Kaiming He and Xiangyu Zhang?",
+    "expected_paper": "Deep Residual Learning for Image Recognition",
+    "expected_answer_contains": [
+      "152"
+    ]
+  },
+  {
+    "question": "What specific problem does the residual learning framework address when adding more layers leads to higher training error in He et al. paper?",
+    "expected_paper": "Deep Residual Learning for Image Recognition",
+    "expected_answer_contains": [
+      "degradation"
+    ]
+  },
+  {
+    "question": "What top-5 error rate did the ensemble of residual nets achieve on the ImageNet test set in Deep Residual Learning for Image Recognition paper?",
+    "expected_paper": "Deep Residual Learning for Image Recognition",
+    "expected_answer_contains": [
+      "3.57%"
+    ]
+  },
+  {
+    "question": "who are the authors of Deep Residual Learning for Image Recognition paper?",
+    "expected_paper": "Deep Residual Learning for Image Recognition",
+    "expected_answer_contains": [
+      "Kaiming He",
+      "Xiangyu Zhang",
+      "Shaoqing Ren",
+      "Jian Sun"
+    ]
   }
 ]
